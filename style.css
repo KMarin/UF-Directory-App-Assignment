@@ -1,25 +1,4 @@
 
-.address{
-  margin-right:28px;
-}
-
-/*.directoryListings{*/
-  /*margin: 5px;*/
-  /*border-radius: 25px;*/
-  /*border-width: 2px;*/
-  /*border-color: #FF0000;*/
-  /*border-style: solid;*/
-/*}*/
-
-.table-striped>tbody>tr:nth-child(odd)>td,
-.table-striped>tbody>tr:nth-child(odd)>th{
-  background-color:#F00;
-}
-
-/*.table-striped>tbody>tr:nth-child(odd)>th{*/
-  /*background-color: #F9F9F9;*/
-/*}*/
-
 body {
   /*background: linear-gradient(#6c9ac3,#FFFFFF);*/
   //background: linear-gradient(#FFFFFF,#6c9ac3);
@@ -27,14 +6,12 @@ body {
   font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 }
 
-
-
 .x:hover{
 
 }
 
 .x{
-  margin-right: 5px;
+  padding:30px;
 }
 
 td:hover {
@@ -62,7 +39,9 @@ td:hover {
   font-size: 325%;
   text-align: center;
   color: #EFEFEF;
-  text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 3px 3px 5px black;
+  text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 3px 3px 5px black;  
+  margin-top: -10px;
+  margin-bottom: 12px;
 }
 
 #searchBar {
@@ -70,7 +49,22 @@ td:hover {
 }
 
 .tableWrapper {
-  max-height: 400px;
-  overflow-y: auto;
-  overflow-x: hidden;
+  max-height: 500px;
+  overflow: auto;
 }
+
+.ListingsHeader{
+  text-align:center;
+}
+
+.BuildingInfoHeader{
+  margin-top: -20px;
+  text-align: center;
+}
+
+.NewListingHeader{
+  margin-top: -5px;
+  margin-bottom: -5px;
+  text-align: center;
+}
+;

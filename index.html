@@ -12,8 +12,8 @@
     </div>
     <div class="container">
         <div class= "row" ng-controller="ListingsController">
-            <div class="col-md-4">
-                <div class = "directoryListings">
+            <div class="col-md-6">
+                <h2 class="ListingsHeader">Listings</h2>
                 <div class="input-group" id="searchBar">
                     <!--
 
@@ -28,8 +28,7 @@
                         <tr>
                             <th>Code</th>
                             <th>Building Name</th>
-                            <th class="address">Address</th>
-                            <th></th>
+                            <th>Address</th>
                         </tr>
 
                         <tr ng-repeat="list in listings| filter:searchText">
@@ -44,23 +43,27 @@
                             Fill in the rest of the table:
                                 * populate the rows with the code and name of each listing
                                 * include a way to remove individual listings
-
                           -->
                     </table>
                 </div>
-                    </div>
+        
                 <!--
 
                     Write an HTML form that adds new listings to the directory
 
                   -->
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="jumbotron">
-                    <h2>Detailed Information</h2>
-                    {{selectedListing.code}}</br>
-                    {{selectedListing.name}}</br>
-                    {{selectedListing.address}}</br>
+                    <h2 class = "BuildingInfoHeader">
+                    Building Information
+                    </h2></br>
+                    Building Name: {{selectedListing.name}}</br> </br>
+                    Abbreiviation: {{selectedListing.code}}</br> </br>
+                    Address: {{selectedListing.address}}</br></br>
+                    Latitude: {{selectedListing.latitude}}</br></br>
+                    Longitude: {{selectedListing.longitude}}</br></br>
+
 
                     <!--
 
@@ -69,24 +72,63 @@
 
                    -->
                 </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class ="NewListingHeader">Add a New Listing</h2></br>
+                        <div class="col-md-3">
+                            <label>Code:</label>
+                        </div>
+                        <div class = "col-md-9">
+                            <input type="text" class="form-control" ng-model="inputListing.code">
+                        </div>
 
+                        <div class = "col-md-3">
+                            <label>Name:</label>
+                        </div>
+                        <div class = "col-md-9">
+                            <input type="text" class="form-control" ng-model="inputListing.name">
+                        </div>
 
+                        <div class = "col-md-3">
+                            <label>Address:</label>
+                        </div>
+                        <div class = "col-md-9">
+                            <input type="text" class="form-control" ng-model="inputListing.address">
+                        </div>
 
-            </div>
-            <div class="col-md-4">
-                <h2>Add a new listing</h2>
-                <table>
-                    <tr><label>Code:</label><input type="text" class="form-control" ng-model="inputListing.code"></tr>
-                    <tr><label>Name:</label><input type="text" class="form-control" ng-model="inputListing.name"></tr>
-                    <tr><label>Address:</label><input type="text" class="form-control" ng-model="inputListing.address"></tr>
-                    <tr><label>Latitude:</label><input type="text" class="form-control" ng-model="inputListing.coordinates.latitude"></tr>
-                    <tr><label>Longitude:</label><input type="text" class="form-control" ng-model="inputListing.coordinates.longitude"></tr>
-                    <tr><input type="button" value="Add Listing" ng-click="addListing(inputListing)"></tr>
-                </table>
+                        <div class = "col-md-3">
+                            <label>Latitude:</label>
+                        </div>
+                        <div class = "col-md-9">
+                            <input type="text" class="form-control" ng-model="inputListing.coordinates.latitude">
+                        </div>
+
+                        
+                        <div class = "col-md-3">
+                            <label>Longitude:</label>
+                        </div>
+                        <div class = "col-md-9">
+                            <input type="text" class="form-control" ng-model="inputListing.coordinates.longitude">
+                        </div> </br>
+
+                        <div class = "col-md-12">
+                            <input type="button" value="Add Listing" ng-click="addListing(inputListing)">
+                        </div>
+
+                        <!--
+                        <table>
+                            <tr><label>Code:</label><input type="text" class="form-control" ng-model="inputListing.code"></tr>
+                            <tr><label>Name:</label><input type="text" class="form-control" ng-model="inputListing.name"></tr>
+                            <tr><label>Address:</label><input type="text" class="form-control" ng-model="inputListing.address"></tr>
+                            <tr><label>Latitude:</label><input type="text" class="form-control" ng-model="inputListing.coordinates.latitude"></tr>
+                            <tr><label>Longitude:</label><input type="text" class="form-control" ng-model="inputListing.coordinates.longitude"></tr> </br>
+                            <tr><input type="button" value="Add Listing" ng-click="addListing(inputListing)"></tr>
+                        </table-->
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
