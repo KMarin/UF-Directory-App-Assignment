@@ -13,6 +13,7 @@
     <div class="container">
         <div class= "row" ng-controller="ListingsController">
             <div class="col-md-4">
+                <div class = "directoryListings">
                 <div class="input-group" id="searchBar">
                     <!--
 
@@ -27,7 +28,8 @@
                         <tr>
                             <th>Code</th>
                             <th>Building Name</th>
-                            <th>Address</th>
+                            <th class="address">Address</th>
+                            <th></th>
                         </tr>
 
                         <tr ng-repeat="list in listings| filter:searchText">
@@ -46,6 +48,7 @@
                           -->
                     </table>
                 </div>
+                    </div>
                 <!--
 
                     Write an HTML form that adds new listings to the directory

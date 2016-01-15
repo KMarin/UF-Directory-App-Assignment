@@ -1,4 +1,25 @@
 
+.address{
+  margin-right:28px;
+}
+
+/*.directoryListings{*/
+  /*margin: 5px;*/
+  /*border-radius: 25px;*/
+  /*border-width: 2px;*/
+  /*border-color: #FF0000;*/
+  /*border-style: solid;*/
+/*}*/
+
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th{
+  background-color:#F00;
+}
+
+/*.table-striped>tbody>tr:nth-child(odd)>th{*/
+  /*background-color: #F9F9F9;*/
+/*}*/
+
 body {
   /*background: linear-gradient(#6c9ac3,#FFFFFF);*/
   //background: linear-gradient(#FFFFFF,#6c9ac3);
@@ -6,12 +27,14 @@ body {
   font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 }
 
+
+
 .x:hover{
 
 }
 
 .x{
-  padding:30px;
+  margin-right: 5px;
 }
 
 td:hover {
@@ -48,5 +71,6 @@ td:hover {
 
 .tableWrapper {
   max-height: 400px;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
