@@ -1,7 +1,7 @@
 
 body {
   /*background: linear-gradient(#6c9ac3,#FFFFFF);*/
-  //background: linear-gradient(#FFFFFF,#6c9ac3);
+  /*background: linear-gradient(#FFFFFF,#6c9ac3);*/
   background: #FFFFFF;
   font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 }
@@ -48,10 +48,24 @@ td:hover {
   margin: 15px 10px;
 }
 
+.jumbotron{
+  background-color: #EBEBFF!important;
+  margin-right: -13px!important;
+}
+
 .tableWrapper {
   max-height: 500px;
   overflow: auto;
 }
+
+/*.table-striped>tbody>tr:nth-child(odd)>td,*/
+/*.table-striped>tbody>tr:nth-child(odd)>th {*/
+  /*background-color: #f9f9f9;*/
+/*}*/
+
+/*.table-striped>tbody>tr:nth-child(even)>td {*/
+ /*background-color: #EBEBFF;*/
+/*}*/
 
 .ListingsHeader{
   text-align:center;
@@ -62,9 +76,8 @@ td:hover {
   text-align: center;
 }
 
-.NewListingHeader{
+.NewListingHeader {
   margin-top: -5px;
   margin-bottom: -5px;
   text-align: center;
 }
-;
