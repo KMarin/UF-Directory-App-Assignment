@@ -69,8 +69,6 @@ td:hover {
   overflow: auto;
 }
 
-<<<<<<< HEAD
-=======
 /*.table-striped>tbody>tr:nth-child(odd)>td,*/
 /*.table-striped>tbody>tr:nth-child(odd)>th {*/
   /*background-color: #f9f9f9;*/
@@ -80,7 +78,6 @@ td:hover {
  /*background-color: #EBEBFF;*/
 /*}*/
 
->>>>>>> 0dd229503090a6ec1470e179a229e9f202173d4b
 .ListingsHeader{
   text-align:center;
 }
@@ -90,17 +87,10 @@ td:hover {
   text-align: center;
 }
 
-<<<<<<< HEAD
-.NewListingHeader{
-  margin-top: -5px;
-  margin-bottom: -5px;
-  text-align: center;
-}
-;
-=======
+
 .NewListingHeader {
   margin-top: -5px;
   margin-bottom: -5px;
   text-align: center;
 }
->>>>>>> 0dd229503090a6ec1470e179a229e9f202173d4b
+
