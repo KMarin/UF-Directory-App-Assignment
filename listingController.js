@@ -74,9 +74,19 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
                 copy.address = listing.address;
             }
 
+            if(listing.coordinates.latitude){
+                copy.coordinates.latitude = listing.coordinates.latitude;
+            }
+
+            if(listing.coordinates.longitude){
+                copy.coordinates.longitude = listing.coordinates.longitude;
+            }
+
             // required listing fields
             copy.code = listing.code;
             copy.name = listing.name;
+
+
 
             return copy;
         };
@@ -87,18 +97,15 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
             $scope.selectedListing = "";
 
         $scope.listings.splice(index,1);
-    };
+        };
 
         $scope.markers = [];
 
 
         $scope.showDetails = function(index) {
 
-            if($scope.listings[index].coordinates == null){
-                return;
-            }
-
-            $scope.selectedListing = $scope.listings[index];
+        $scope.selectedListing = $scope.listings[index];
+            
         };
     }
 ]);
