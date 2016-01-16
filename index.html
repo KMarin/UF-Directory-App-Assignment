@@ -29,6 +29,7 @@
                             <th>Code</th>
                             <th>Building Name</th>
                             <th>Address</th>
+                            <th></th>
                         </tr>
 
                         <tr ng-repeat="list in listings| filter:searchText">
@@ -63,8 +64,13 @@
                     Building Name: {{selectedListing.name}}</br> </br>
                     Abbreiviation: {{selectedListing.code}}</br> </br>
                     Address: {{selectedListing.address}}</br></br>
+<<<<<<< HEAD
                     Latitude: {{selectedListing.coordinates.latitude}}</br></br>
                     Longitude: {{selectedListing.coordinates.longitude}}</br></br>
+=======
+                    Latitude: {{selectedListing.latitude}}</br></br>
+                    Longitude: {{selectedListing.longitude}}</br></br>
+>>>>>>> 0dd229503090a6ec1470e179a229e9f202173d4b
 
 
                     <!--
