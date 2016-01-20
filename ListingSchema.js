@@ -27,13 +27,26 @@ var listingSchema = new Schema({
 listingSchema.pre('save', function(next) {
   if(!this.code || !this.name){
       var err = new Error('Save of listing failed due to missing required field(s)[name, code]')
+      next(err);
   }
 
+    var curr_time = Date.now();
+
     if(!this.created_at)
-    this.created_at = Date.now;
+    this.created_at = curr_time;
 
     this.updated_at = Date.now;
 
+    console.log("****Saved Listing****");
+    console.log(this);
+    console.log("*********************\n")
+
+    next();
+});
+
+
+listingSchema.pre('findOneAndUpdate', function(next){
+    this.findOneAndUpdate({}, {updated_at: Date.now() });
     next();
 });
 

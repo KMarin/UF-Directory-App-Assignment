@@ -17,7 +17,7 @@ mongoose.connect(config.db.uri);
  */
 
 //read listings.json
-var listings = JSON.parse(fs.readFileSYnc('listings.json', 'utf8')).entries
+var listings = JSON.parse(fs.readFileSync('listings.json', 'utf8')).entries;
 
 //Adds entries from listings.json to the db
 var entries_counter = 0;
@@ -31,6 +31,7 @@ var callback = function(err){
         mongoose.disconnect();
     }
 }
+
 
 for(var i = 0; i < listings.length; ++i){
     new Listing(listings[i])
